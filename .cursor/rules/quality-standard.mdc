@@ -1,0 +1,26 @@
+---
+description: Core Visual, Motion, Interaction, and Engineering Quality Standard
+alwaysApply: true
+---
+
+# Studio Frontend Quality Standard
+
+## 1. Visual & Token Discipline
+- Never invent ad-hoc hex colors, arbitrary spacing, or random border radii. Map all styling to semantic CSS variables / Tailwind theme tokens defined in `DESIGN.md`.
+- Establish clear typographic contrast: pair a distinct display/heading treatment with highly legible body copy (`tabular-nums` for numeric data, balanced line lengths `55ch–70ch`).
+- Avoid AI clichés: no gratuitous purple-blue gradients, no glowing neon drop-shadows on generic SaaS cards, no single-word rainbow headline highlights, and no placeholder copy ("Lorem ipsum", "John Doe").
+
+## 2. Motion & Scroll Choreography
+- Purpose over decoration: every animation must clarify spatial origin, hierarchy, or state feedback.
+- UI micro-interactions (modals, dropdowns, tabs, hover states) must be interruptible, stay under 300ms, and use `ease-out` for entrances (`cubic-bezier(0.22, 1, 0.36, 1)`) and `ease-in-out` for layout shifts.
+- Animate ONLY compositor-friendly properties (`transform`, `opacity`, `clip-path`). Never animate `width`, `height`, `top`, `left`, or `margin`.
+- UI state motion: prefer Emil `/animate` (CSS/Motion). Scroll scrubbing, pinning, complex timelines: GSAP (`/gsap-scrolltrigger`, `/gsap-react`) with `useGSAP()` / `gsap.context()` cleanup.
+- Respect `@media (prefers-reduced-motion: reduce)` across both CSS and GSAP/Motion timelines.
+
+## 3. Interaction & State Completeness
+- Every interactive control must implement `:hover`, `:focus-visible`, `:active`, and `disabled` states.
+- Never ship dead buttons or mock handlers. Every route, drawer, form submission, loading skeleton, empty state, and error recovery path must function end-to-end.
+
+## 4. Engineering Hygiene
+- Use compound component composition rather than prop-drilling 10+ boolean flags.
+- Clean up all event listeners, `IntersectionObserver` instances, Lenis RAF loops, and GSAP contexts (`useGSAP` / `ctx.revert()`) on unmount.
