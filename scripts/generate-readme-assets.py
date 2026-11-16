@@ -402,55 +402,92 @@ def divider(dark: bool) -> str:
 
 
 def kicker(label: str, filename: str, icon_fn) -> None:
+    # 48 well centered in 64; icon 24@1.5=36 → pad 6
     write(
         f"kickers/{filename}",
         f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" role="img" aria-label="{label}">
   <rect x="0" y="8" width="48" height="48" rx="14" fill="{MUTED}" stroke="{BORDER}"/>
-  {icon_fn(8, 16, 1.65)}
-  <text x="64" y="42" fill="{PRIMARY}" font-family="{MONO}" font-size="16" font-weight="700" letter-spacing="2.6">{label.upper()}</text>
+  {icon_fn(6, 14, 1.5)}
+  <text x="64" y="40" fill="{PRIMARY}" font-family="{MONO}" font-size="16" font-weight="700" letter-spacing="2.6">{label.upper()}</text>
 </svg>''',
     )
 
 
 def button(label: str, filename: str, icon_fn, filled: bool = False) -> None:
+    """Icon well + text optically centered — fixes navy-on-navy portfolio globe."""
+    h, w = 60, 210
+    well, well_x, well_y = 36, 12, 12  # (60-36)/2 = 12
+    icon_pad = 6  # (36 - 24*1.0)/2 when s=1.0 → use 1.0 then pad; use s=1.0 with pad 6 for crisp
+    # Prefer slightly larger: s=1.1 → 26.4, pad=(36-26.4)/2=4.8
+    icon_s = 1.1
+    icon_pad = round((well - 24 * icon_s) / 2, 1)
     fill = PRIMARY if filled else SURFACE
     stroke = PRIMARY
     text = PAPER if filled else INK
+    well_fill = "rgba(255,255,255,0.18)" if filled else MUTED
+    well_stroke = "rgba(255,255,255,0.35)" if filled else BORDER
+    # Portfolio filled uses light globe so strokes stay visible on navy well
+    ix, iy = well_x + icon_pad, well_y + icon_pad
+    icon_svg = icon_fn(ix, iy, icon_s)
+    if filled and filename == "btn-portfolio.svg":
+        icon_svg = icon_globe(ix, iy, icon_s, "#79B4E8")
+    text_x = well_x + well + 14
+    text_y = h // 2 + 6  # optical center for ~16px bold
     write(
         f"buttons/{filename}",
-        f'''<svg xmlns="http://www.w3.org/2000/svg" width="220" height="64" viewBox="0 0 220 64" role="img" aria-label="{label}">
-  <rect x="0.75" y="0.75" width="218.5" height="62.5" rx="14" fill="{fill}" stroke="{stroke}" stroke-width="2.5"/>
-  {icon_fn(16, 16, 1.55)}
-  <text x="62" y="40" fill="{text}" font-family="{FONT}" font-size="17" font-weight="700">{label}</text>
+        f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{label}">
+  <defs>
+    <linearGradient id="btnGrad{filename.replace('.', '')}" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="{PRIMARY if filled else SURFACE}"/>
+      <stop offset="100%" stop-color="{HIGHLIGHT if filled else MUTED}"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.75" y="0.75" width="{w - 1.5}" height="{h - 1.5}" rx="14" fill="{"url(#btnGrad" + filename.replace('.', '') + ")" if filled else SURFACE}" stroke="{stroke}" stroke-width="2"/>
+  <rect x="{well_x}" y="{well_y}" width="{well}" height="{well}" rx="10" fill="{well_fill}" stroke="{well_stroke}"/>
+  {icon_svg}
+  <text x="{text_x}" y="{text_y:.0f}" fill="{text}" font-family="{FONT}" font-size="16" font-weight="700">{label}</text>
 </svg>''',
     )
 
 
 STRIP_BG = ["#EFF6FF", "#F5F3FF", "#FDF2F8", "#ECFDF5", "#FFFBEB", "#F0F9FF"]
+STRIP_WELL = ["#DBEAFE", "#EDE9FE", "#FCE7F3", "#D1FAE5", "#FEF3C7", "#E0F2FE"]
 
 
 def strip(title: str, items: list[tuple[str, str, str]], filename: str, height: int = 176) -> None:
-    """items: (headline, sub, icon_svg_at_origin)"""
+    """items: (headline, sub, icon_svg_at_origin) — icon in a centered well, text block aligned."""
     n = len(items)
     gap = 14
     pad = 20
     usable = 880 - pad * 2 - gap * (n - 1)
     w = usable / n
+    card_y, card_h = 48, 112
+    well = 44
     cards = []
     for i, (h, sub, ic) in enumerate(items):
         x = pad + i * (w + gap)
         bg = STRIP_BG[i % len(STRIP_BG)]
+        well_bg = STRIP_WELL[i % len(STRIP_WELL)]
+        well_x = x + 14
+        well_y = card_y + (card_h - well) / 2
+        # icon 24 @ 1.25 = 30 → pad (44-30)/2 = 7
+        icon_s = 1.25
+        icon_pad = (well - 24 * icon_s) / 2
+        text_x = well_x + well + 12
+        title_y = well_y + 18
+        sub_y = well_y + 40
         cards.append(
-            f'''  <rect x="{x:.1f}" y="48" width="{w:.1f}" height="108" rx="16" fill="{bg}" stroke="{BORDER}"/>
-  <g transform="translate({x + 14:.1f} 60) scale(1.7)">{ic}</g>
-  <text x="{x + 64:.1f}" y="90" fill="{INK}" font-family="{FONT}" font-size="16" font-weight="700">{h}</text>
-  <text x="{x + 64:.1f}" y="116" fill="{BODY}" font-family="{FONT}" font-size="13">{sub}</text>'''
+            f'''  <rect x="{x:.1f}" y="{card_y}" width="{w:.1f}" height="{card_h}" rx="16" fill="{bg}" stroke="{BORDER}"/>
+  <rect x="{well_x:.1f}" y="{well_y:.1f}" width="{well}" height="{well}" rx="12" fill="{well_bg}" stroke="{BORDER}"/>
+  <g transform="translate({well_x + icon_pad:.1f} {well_y + icon_pad:.1f}) scale({icon_s})">{ic}</g>
+  <text x="{text_x:.1f}" y="{title_y:.1f}" fill="{INK}" font-family="{FONT}" font-size="15" font-weight="700">{h}</text>
+  <text x="{text_x:.1f}" y="{sub_y:.1f}" fill="{BODY}" font-family="{FONT}" font-size="12">{sub}</text>'''
         )
     write(
         filename,
         f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="{height}" viewBox="0 0 880 {height}" role="img" aria-labelledby="t">
   <title id="t">{title}</title>
-  <rect width="880" height="{height}" rx="8" fill="{SURFACE}" stroke="{BORDER}"/>
+  <rect width="880" height="{height}" rx="10" fill="{SURFACE}" stroke="{BORDER}"/>
   <text x="20" y="30" fill="{PRIMARY}" font-family="{MONO}" font-size="12" letter-spacing="1.8">{title.upper()}</text>
 {chr(10).join(cards)}
 </svg>''',
@@ -491,22 +528,25 @@ def card(code: str, title: str, blurb: list[str], meta: str, filename: str, acce
 def github_progress() -> str:
     """Verified portfolio progress + creative activity board (not fake commit counts)."""
     rows = [
-        ("Case studies documented", 6, 6, "#0D9488", icon_policy),
-        ("Verified engineering roles", 2, 2, "#7C3AED", icon_briefcase),
-        ("Featured production systems", 6, 6, "#0369A1", icon_cloud),
-        ("Public portfolio + writing", 4, 4, "#DB2777", icon_globe),
+        ("Case studies documented", 6, 6, "#0D9488", "#CCFBF1", icon_policy),
+        ("Verified engineering roles", 2, 2, "#7C3AED", "#EDE9FE", icon_briefcase),
+        ("Featured production systems", 6, 6, "#0369A1", "#E0F2FE", icon_cloud),
+        ("Public portfolio + writing", 4, 4, "#DB2777", "#FCE7F3", icon_globe),
     ]
     parts = []
-    for i, (label, done, total, color, ic) in enumerate(rows):
-        y = 64 + i * 56
-        bar_w = 640 * (done / total)
+    for i, (label, done, total, color, well, ic) in enumerate(rows):
+        y = 62 + i * 54
+        bar_w = 620 * (done / total)
+        # 40px well, icon 24@1.25=30 → pad 5
         parts.append(
-            f'''  <rect x="28" y="{y}" width="824" height="48" rx="14" fill="{MUTED}"/>
-  {ic(42, y + 10, 1.5)}
-  <text x="100" y="{y + 22}" fill="{INK}" font-family="{FONT}" font-size="15" font-weight="700">{label}</text>
-  <text x="820" y="{y + 22}" text-anchor="end" fill="{color}" font-family="{MONO}" font-size="14" font-weight="700">{done}/{total}</text>
-  <rect x="100" y="{y + 32}" width="640" height="10" rx="5" fill="#E2E8F0"/>
-  <rect x="100" y="{y + 32}" width="{bar_w:.0f}" height="10" rx="5" fill="{color}"/>'''
+            f'''  <rect x="24" y="{y}" width="832" height="48" rx="14" fill="{MUTED}"/>
+  <rect x="34" y="{y + 4}" width="40" height="40" rx="12" fill="{well}" stroke="{color}" stroke-opacity="0.35"/>
+  {ic(39, y + 9, 1.25)}
+  <text x="90" y="{y + 20}" fill="{INK}" font-family="{FONT}" font-size="14" font-weight="700">{label}</text>
+  <text x="832" y="{y + 20}" text-anchor="end" fill="{color}" font-family="{MONO}" font-size="13" font-weight="700">{done}/{total}</text>
+  <rect x="90" y="{y + 30}" width="620" height="10" rx="5" fill="#E2E8F0"/>
+  <rect x="90" y="{y + 30}" width="{bar_w:.0f}" height="10" rx="5" fill="{color}"/>
+  <circle cx="{90 + bar_w:.0f}" cy="{y + 35}" r="5" fill="{SURFACE}" stroke="{color}" stroke-width="2"/>'''
         )
 
     cells = []
@@ -515,12 +555,18 @@ def github_progress() -> str:
         0, 1, 2, 3, 2, 0, 0, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 2, 1, 0, 0, 1, 3, 4, 3, 2, 1,
         1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 4, 3, 2, 1, 0, 2, 3, 4, 2, 1, 0, 1, 2, 3, 4, 3, 1, 0,
     ]
-    palette = ["#E2E8F0", "#93C5FD", "#3B82F6", "#1D4ED8", "#2A527A"]
+    palette = ["#E2E8F0", "#99F6E4", "#67E8F9", "#60A5FA", "#2A527A", "#A78BFA", "#F472B6"]
+    # Remap 0-4 into richer palette indices for more color
+    remap = [0, 1, 2, 3, 4, 5, 6]
     for i, lv in enumerate(levels[:84]):
         col = i % 28
         row = i // 28
+        tone = remap[lv % len(remap)] if lv else 0
+        if lv >= 3:
+            tone = 3 + (i % 4)  # mix blues/violets/pinks on hot cells
+            tone = min(tone, 6)
         cells.append(
-            f'<rect x="{28 + col * 30}" y="{300 + row * 30}" width="26" height="26" rx="6" fill="{palette[lv]}"/>'
+            f'<rect x="{28 + col * 30}" y="{298 + row * 28}" width="24" height="24" rx="6" fill="{palette[tone]}"/>'
         )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420" role="img" aria-labelledby="t d">
@@ -529,18 +575,91 @@ def github_progress() -> str:
   <defs>
     <linearGradient id="gpHead" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2A527A"/>
-      <stop offset="100%" stop-color="#3878B0"/>
+      <stop offset="55%" stop-color="#3878B0"/>
+      <stop offset="100%" stop-color="#0D9488"/>
     </linearGradient>
   </defs>
-  <rect width="880" height="420" rx="12" fill="{SURFACE}" stroke="{BORDER}"/>
-  <rect width="880" height="48" rx="12" fill="url(#gpHead)"/>
-  <rect y="24" width="880" height="24" fill="url(#gpHead)"/>
-  <text x="28" y="32" fill="#F4F7FA" font-family="{FONT}" font-size="18" font-weight="700">GitHub profile progress</text>
-  <text x="852" y="32" text-anchor="end" fill="#DBEAFE" font-family="{MONO}" font-size="11">VERIFIED · PORTFOLIO</text>
+  <rect width="880" height="420" rx="14" fill="{SURFACE}" stroke="{BORDER}"/>
+  <rect width="880" height="52" rx="14" fill="url(#gpHead)"/>
+  <rect y="26" width="880" height="26" fill="url(#gpHead)"/>
+  {icon_github(24, 12, 1.15)}
+  <text x="60" y="34" fill="#F4F7FA" font-family="{FONT}" font-size="18" font-weight="700">GitHub profile progress</text>
+  <text x="852" y="34" text-anchor="end" fill="#DBEAFE" font-family="{MONO}" font-size="11">VERIFIED · PORTFOLIO</text>
 {chr(10).join(parts)}
-  <text x="28" y="288" fill="{PRIMARY}" font-family="{MONO}" font-size="11" letter-spacing="1.4">CRAFT RHYTHM · ILLUSTRATIVE PATTERN</text>
+  <text x="28" y="286" fill="{PRIMARY}" font-family="{MONO}" font-size="11" letter-spacing="1.4">CRAFT RHYTHM · ILLUSTRATIVE PATTERN</text>
 {chr(10).join(cells)}
   <text x="28" y="408" fill="{BODY}" font-family="{FONT}" font-size="11">Bars match published case studies, roles, and portfolio surfaces — not invented commit totals.</text>
+</svg>'''
+
+
+def github_overview() -> str:
+    """Local GitHub overview card — no third-party image host."""
+    facts = [
+        ("6", "Case studies", "#0D9488", icon_policy),
+        ("2", "Verified roles", "#7C3AED", icon_briefcase),
+        ("6", "Live systems", "#0369A1", icon_cloud),
+        ("3", "Public essays", "#DB2777", icon_globe),
+    ]
+    tiles = []
+    for i, (num, label, color, ic) in enumerate(facts):
+        col = i % 2
+        row = i // 2
+        x = 24 + col * 200
+        y = 72 + row * 72
+        tiles.append(
+            f'''  <rect x="{x}" y="{y}" width="188" height="60" rx="12" fill="{MUTED}"/>
+  <rect x="{x + 10}" y="{y + 10}" width="40" height="40" rx="10" fill="{SURFACE}" stroke="{color}" stroke-opacity="0.4"/>
+  {ic(x + 18, y + 18, 1.0)}
+  <text x="{x + 62}" y="{y + 28}" fill="{color}" font-family="{MONO}" font-size="20" font-weight="700">{num}</text>
+  <text x="{x + 62}" y="{y + 48}" fill="{BODY}" font-family="{FONT}" font-size="12">{label}</text>'''
+        )
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="424" height="220" viewBox="0 0 424 220" role="img" aria-labelledby="t">
+  <title id="t">GitHub profile overview — verified portfolio evidence</title>
+  <defs>
+    <linearGradient id="goHead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#181717"/>
+      <stop offset="100%" stop-color="#2A527A"/>
+    </linearGradient>
+  </defs>
+  <rect width="424" height="220" rx="14" fill="{SURFACE}" stroke="{BORDER}"/>
+  <rect width="424" height="52" rx="14" fill="url(#goHead)"/>
+  <rect y="26" width="424" height="26" fill="url(#goHead)"/>
+  {icon_github(18, 12, 1.15)}
+  <text x="54" y="34" fill="#F4F7FA" font-family="{FONT}" font-size="16" font-weight="700">dev-mubaidjavaid</text>
+  <text x="400" y="34" text-anchor="end" fill="#A7F3D0" font-family="{MONO}" font-size="10">LOCAL · ALWAYS LOADS</text>
+{chr(10).join(tiles)}
+</svg>'''
+
+
+def github_langs() -> str:
+    """Primary craft languages from shipping work — not invented GitHub percentages."""
+    langs = [
+        ("TypeScript", 0.92, C_TS),
+        ("JavaScript", 0.78, "#EAB308"),
+        ("CSS / Tailwind", 0.70, C_TAIL),
+        ("Node / Express", 0.66, C_NODE),
+        ("Python tooling", 0.42, "#3776AB"),
+    ]
+    bars = []
+    for i, (name, pct, color) in enumerate(langs):
+        y = 64 + i * 28
+        bw = 280 * pct
+        bars.append(
+            f'''  <text x="24" y="{y + 12}" fill="{INK}" font-family="{FONT}" font-size="13" font-weight="600">{name}</text>
+  <rect x="150" y="{y}" width="250" height="14" rx="7" fill="#E2E8F0"/>
+  <rect x="150" y="{y}" width="{bw:.0f}" height="14" rx="7" fill="{color}"/>
+  <text x="410" y="{y + 12}" text-anchor="end" fill="{BODY}" font-family="{MONO}" font-size="11">{int(pct * 100)}</text>'''
+        )
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="424" height="220" viewBox="0 0 424 220" role="img" aria-labelledby="t">
+  <title id="t">Primary languages in shipping work</title>
+  <rect width="424" height="220" rx="14" fill="{SURFACE}" stroke="{BORDER}"/>
+  <rect width="424" height="52" rx="14" fill="{PRIMARY}"/>
+  <rect y="26" width="424" height="26" fill="{PRIMARY}"/>
+  {icon_config(18, 12, 1.15)}
+  <text x="54" y="34" fill="#F4F7FA" font-family="{FONT}" font-size="16" font-weight="700">Craft languages</text>
+  <text x="400" y="34" text-anchor="end" fill="#DBEAFE" font-family="{MONO}" font-size="10">PORTFOLIO EMPHASIS</text>
+{chr(10).join(bars)}
+  <text x="24" y="208" fill="{BODY}" font-family="{FONT}" font-size="10">Relative emphasis in published work — not live GitHub API shares.</text>
 </svg>'''
 
 
@@ -783,6 +902,8 @@ def main() -> None:
     write("diagrams/auth-flow.svg", auth_flow())
     write("diagrams/delivery.svg", delivery())
     write("github-progress.svg", github_progress())
+    write("github-overview.svg", github_overview())
+    write("github-langs.svg", github_langs())
     print("done")
 
 

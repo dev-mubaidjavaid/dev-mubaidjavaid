@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" role="img" aria-label="Evolvo delivery">
   <rect x="0" y="8" width="48" height="48" rx="14" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <g transform="translate(8 16) scale(1.65)">
+  <g transform="translate(6 14) scale(1.5)">
   <path d="M7 17h11a4 4 0 00.4-8A6 6 0 006.2 11 3.8 3.8 0 007 17z" fill="#0EA5E9"/>
   <circle cx="9" cy="12" r="1" fill="#E0F2FE"/>
   <circle cx="13" cy="11" r="1" fill="#E0F2FE"/>
   <circle cx="17" cy="13" r="1" fill="#E0F2FE"/>
 </g>
-  <text x="64" y="42" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="2.6">EVOLVO DELIVERY</text>
+  <text x="64" y="40" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="2.6">EVOLVO DELIVERY</text>
 </svg>

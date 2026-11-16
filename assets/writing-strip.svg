@@ -1,31 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="176" viewBox="0 0 880 176" role="img" aria-labelledby="t">
   <title id="t">Writing</title>
-  <rect width="880" height="176" rx="8" fill="#FFFFFF" stroke="#D8E0EA"/>
+  <rect width="880" height="176" rx="10" fill="#FFFFFF" stroke="#D8E0EA"/>
   <text x="20" y="30" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">WRITING</text>
-  <rect x="20.0" y="48" width="270.7" height="108" rx="16" fill="#EFF6FF" stroke="#D8E0EA"/>
-  <g transform="translate(34.0 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
+  <rect x="20.0" y="48" width="270.7" height="112" rx="16" fill="#EFF6FF" stroke="#D8E0EA"/>
+  <rect x="34.0" y="82.0" width="44" height="44" rx="12" fill="#DBEAFE" stroke="#D8E0EA"/>
+  <g transform="translate(41.0 89.0) scale(1.25)"><g transform="translate(0 0) scale(1)">
   <circle cx="12" cy="12" r="10" fill="#111111"/>
   <ellipse cx="12" cy="12" rx="4" ry="10" fill="none" stroke="#fff" stroke-width="1.4"/>
   <path d="M2 12h20M4.5 7h15M4.5 17h15" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
 </g></g>
-  <text x="84.0" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Next.js vs SPA</text>
-  <text x="84.0" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Business websites</text>
-  <rect x="304.7" y="48" width="270.7" height="108" rx="16" fill="#F5F3FF" stroke="#D8E0EA"/>
-  <g transform="translate(318.7 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
+  <text x="90.0" y="100.0" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Next.js vs SPA</text>
+  <text x="90.0" y="122.0" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Business websites</text>
+  <rect x="304.7" y="48" width="270.7" height="112" rx="16" fill="#F5F3FF" stroke="#D8E0EA"/>
+  <rect x="318.7" y="82.0" width="44" height="44" rx="12" fill="#EDE9FE" stroke="#D8E0EA"/>
+  <g transform="translate(325.7 89.0) scale(1.25)"><g transform="translate(0 0) scale(1)">
   <path d="M7 17h11a4 4 0 00.4-8A6 6 0 006.2 11 3.8 3.8 0 007 17z" fill="#0EA5E9"/>
   <circle cx="9" cy="12" r="1" fill="#E0F2FE"/>
   <circle cx="13" cy="11" r="1" fill="#E0F2FE"/>
   <circle cx="17" cy="13" r="1" fill="#E0F2FE"/>
 </g></g>
-  <text x="368.7" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Vercel vs VPS</text>
-  <text x="368.7" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">SaaS hosting</text>
-  <rect x="589.3" y="48" width="270.7" height="108" rx="16" fill="#FDF2F8" stroke="#D8E0EA"/>
-  <g transform="translate(603.3 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
+  <text x="374.7" y="100.0" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Vercel vs VPS</text>
+  <text x="374.7" y="122.0" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">SaaS hosting</text>
+  <rect x="589.3" y="48" width="270.7" height="112" rx="16" fill="#FDF2F8" stroke="#D8E0EA"/>
+  <rect x="603.3" y="82.0" width="44" height="44" rx="12" fill="#FCE7F3" stroke="#D8E0EA"/>
+  <g transform="translate(610.3 89.0) scale(1.25)"><g transform="translate(0 0) scale(1)">
   <circle cx="9" cy="8" r="3.2" fill="#2A527A"/>
   <circle cx="16" cy="9" r="2.6" fill="#3878B0"/>
   <path d="M2.5 19c0-3.2 2.9-5.5 6.5-5.5S15.5 15.8 15.5 19" fill="#2A527A" opacity="0.9"/>
   <path d="M14 19c.3-2 1.8-3.5 4.2-3.8 2 .3 3.3 1.6 3.3 3.8" fill="#3878B0" opacity="0.85"/>
 </g></g>
-  <text x="653.3" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Hiring Next.js</text>
-  <text x="653.3" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Pakistan freelancers</text>
+  <text x="659.3" y="100.0" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Hiring Next.js</text>
+  <text x="659.3" y="122.0" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Pakistan freelancers</text>
 </svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="424" height="220" viewBox="0 0 424 220" role="img" aria-labelledby="t">
+  <title id="t">GitHub profile overview — verified portfolio evidence</title>
+  <defs>
+    <linearGradient id="goHead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#181717"/>
+      <stop offset="100%" stop-color="#2A527A"/>
+    </linearGradient>
+  </defs>
+  <rect width="424" height="220" rx="14" fill="#FFFFFF" stroke="#D8E0EA"/>
+  <rect width="424" height="52" rx="14" fill="url(#goHead)"/>
+  <rect y="26" width="424" height="26" fill="url(#goHead)"/>
+  <g transform="translate(18 12) scale(1.15)">
+  <circle cx="12" cy="12" r="11" fill="#181717"/>
+  <path fill="#fff" d="M12 4.2c-4.3 0-7.8 3.5-7.8 7.8 0 3.4 2.2 6.4 5.3 7.4.4.1.5-.2.5-.4v-1.4c-2.2.5-2.6-1-2.6-1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.7-.2-3.5-.9-3.5-3.9 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.5 7.5 0 014 0c1.5-1 2.2-.8 2.2-.8.5 1.1.2 1.9.1 2.1.5.6.8 1.2.8 2.1 0 3-1.8 3.7-3.5 3.9.3.3.6.7.6 1.5v2.2c0 .2.2.5.6.4A7.8 7.8 0 0019.8 12c0-4.3-3.5-7.8-7.8-7.8z"/>
+</g>
+  <text x="54" y="34" fill="#F4F7FA" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">dev-mubaidjavaid</text>
+  <text x="400" y="34" text-anchor="end" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">LOCAL · ALWAYS LOADS</text>
+  <rect x="24" y="72" width="188" height="60" rx="12" fill="#EEF2F6"/>
+  <rect x="34" y="82" width="40" height="40" rx="10" fill="#FFFFFF" stroke="#0D9488" stroke-opacity="0.4"/>
+  <g transform="translate(42 90) scale(1.0)">
+  <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" fill="#2563EB"/>
+  <path d="M15 3v5h5" fill="#1D4ED8"/>
+  <path d="M8 13h8M8 16h6" stroke="#DBEAFE" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+  <text x="86" y="100" fill="#0D9488" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">6</text>
+  <text x="86" y="120" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Case studies</text>
+  <rect x="224" y="72" width="188" height="60" rx="12" fill="#EEF2F6"/>
+  <rect x="234" y="82" width="40" height="40" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-opacity="0.4"/>
+  <g transform="translate(242 90) scale(1.0)">
+  <rect x="2" y="8" width="20" height="13" rx="2" fill="#D97706"/>
+  <rect x="8" y="4" width="8" height="5" rx="1.5" fill="#B45309"/>
+  <path d="M2 13h20" stroke="#FDE68A" stroke-width="1.5"/>
+  <rect x="10" y="12" width="4" height="3" rx="0.8" fill="#FDE68A"/>
+</g>
+  <text x="286" y="100" fill="#7C3AED" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">2</text>
+  <text x="286" y="120" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Verified roles</text>
+  <rect x="24" y="144" width="188" height="60" rx="12" fill="#EEF2F6"/>
+  <rect x="34" y="154" width="40" height="40" rx="10" fill="#FFFFFF" stroke="#0369A1" stroke-opacity="0.4"/>
+  <g transform="translate(42 162) scale(1.0)">
+  <path d="M7 17h11a4 4 0 00.4-8A6 6 0 006.2 11 3.8 3.8 0 007 17z" fill="#0EA5E9"/>
+  <circle cx="9" cy="12" r="1" fill="#E0F2FE"/>
+  <circle cx="13" cy="11" r="1" fill="#E0F2FE"/>
+  <circle cx="17" cy="13" r="1" fill="#E0F2FE"/>
+</g>
+  <text x="86" y="172" fill="#0369A1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">6</text>
+  <text x="86" y="192" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Live systems</text>
+  <rect x="224" y="144" width="188" height="60" rx="12" fill="#EEF2F6"/>
+  <rect x="234" y="154" width="40" height="40" rx="10" fill="#FFFFFF" stroke="#DB2777" stroke-opacity="0.4"/>
+  <g transform="translate(242 162) scale(1.0)">
+  <circle cx="12" cy="12" r="10" fill="#2A527A"/>
+  <ellipse cx="12" cy="12" rx="4" ry="10" fill="none" stroke="#fff" stroke-width="1.4"/>
+  <path d="M2 12h20M4.5 7h15M4.5 17h15" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+</g>
+  <text x="286" y="172" fill="#DB2777" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">3</text>
+  <text x="286" y="192" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Public essays</text>
+</svg>
