@@ -1,26 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="130" viewBox="0 0 760 130" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="120" viewBox="0 0 880 120" role="img" aria-labelledby="t">
   <title id="t">Writing</title>
-  <rect width="760" height="130" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
-  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
-    <rect x="18" y="22" width="234" height="86" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
-    <g transform="translate(34 38)" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4 3h8l3 3v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M11 3v3h3M6 11h6M6 14h4"/>
-    </g>
-    <text x="64" y="52" fill="#0B0E13" font-size="12" font-weight="700">Next.js vs React SPA</text>
-    <text x="34" y="84" fill="#6B7280" font-size="11">SEO · speed · maintenance</text>
-
-    <rect x="263" y="22" width="234" height="86" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
-    <g transform="translate(279 38)" fill="none" stroke="#0369A1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="3" width="16" height="14" rx="2"/><path d="M6 7h8M6 11h5"/>
-    </g>
-    <text x="309" y="52" fill="#0B0E13" font-size="12" font-weight="700">Vercel vs VPS</text>
-    <text x="279" y="84" fill="#6B7280" font-size="11">When managed hosting ends</text>
-
-    <rect x="508" y="22" width="234" height="86" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
-    <g transform="translate(524 38)" fill="none" stroke="#7C3AED" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="10" cy="7" r="3"/><path d="M3 17c0-2.5 2.5-4.5 7-4.5s7 2 7 4.5"/>
-    </g>
-    <text x="554" y="52" fill="#0B0E13" font-size="12" font-weight="700">Hire Next.js (PK)</text>
-    <text x="524" y="84" fill="#6B7280" font-size="11">What remote buyers check</text>
-  </g>
+  <rect width="880" height="120" rx="4" fill="#FFFFFF" stroke="#D8E0EA"/>
+  <text x="20" y="28" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="1.6">WRITING</text>
+  <rect x="20.0" y="48" width="272.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
+  <text x="34.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Next.js vs SPA</text>
+  <text x="34.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Business websites</text>
+  <rect x="304.0" y="48" width="272.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
+  <text x="318.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Vercel vs VPS</text>
+  <text x="318.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">SaaS hosting</text>
+  <rect x="588.0" y="48" width="272.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
+  <text x="602.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Hiring Next.js</text>
+  <text x="602.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Pakistan freelancers</text>
 </svg>
