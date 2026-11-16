@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="44" viewBox="0 0 880 44" role="img" aria-label="Stack">
-  <g transform="translate(0 10) scale(1)">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" role="img" aria-label="Stack">
+  <rect x="0" y="8" width="48" height="48" rx="14" fill="#EEF2F6" stroke="#D8E0EA"/>
+  <g transform="translate(8 16) scale(1.65)">
   <circle cx="12" cy="12" r="3.2" fill="#F59E0B"/>
   <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M5.1 18.9l1.6-1.6M17.3 6.7l1.6-1.6" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
   <circle cx="12" cy="12" r="1.4" fill="#FEF3C7"/>
 </g>
-  <text x="36" y="28" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" letter-spacing="2.2">STACK</text>
+  <text x="64" y="42" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="2.6">STACK</text>
 </svg>

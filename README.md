@@ -21,15 +21,15 @@
 I engineer production web systems: multi-tenant SaaS, operational dashboards, and the APIs and data models underneath them. Currently at **Evolvo Technologies**, shipping client products across fintech, healthcare, prop trading, and real estate.
 
 <p align="center">
-  <a href="https://mubaidjavaid.vercel.app"><img src="./assets/buttons/btn-portfolio.svg" alt="Portfolio" height="44"></a>
+  <a href="https://mubaidjavaid.vercel.app"><img src="./assets/buttons/btn-portfolio.svg" alt="Portfolio" height="64"></a>
   &nbsp;
-  <a href="https://mubaidjavaid.vercel.app/projects"><img src="./assets/buttons/btn-cases.svg" alt="Case studies" height="44"></a>
+  <a href="https://mubaidjavaid.vercel.app/projects"><img src="./assets/buttons/btn-cases.svg" alt="Case studies" height="64"></a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/m-ubaid-javaid-260735407"><img src="./assets/buttons/btn-linkedin.svg" alt="LinkedIn" height="44"></a>
+  <a href="https://www.linkedin.com/in/m-ubaid-javaid-260735407"><img src="./assets/buttons/btn-linkedin.svg" alt="LinkedIn" height="64"></a>
   &nbsp;
-  <a href="mailto:mubaidjavaid97@gmail.com"><img src="./assets/buttons/btn-email.svg" alt="Email" height="44"></a>
+  <a href="mailto:mubaidjavaid97@gmail.com"><img src="./assets/buttons/btn-email.svg" alt="Email" height="64"></a>
   &nbsp;
-  <a href="https://github.com/dev-mubaidjavaid"><img src="./assets/buttons/btn-github.svg" alt="GitHub" height="44"></a>
+  <a href="https://github.com/dev-mubaidjavaid"><img src="./assets/buttons/btn-github.svg" alt="GitHub" height="64"></a>
 </p>
 
 <img src="./assets/domains-strip.svg" alt="Domains: fintech, healthcare, ops/POS, commerce" width="100%">
@@ -37,6 +37,22 @@ I engineer production web systems: multi-tenant SaaS, operational dashboards, an
 <br>
 
 <img src="./assets/proof-strip.svg" alt="6 case studies, 2 verified roles, 50+ Evolvo sites attributed, 0 invented metrics" width="100%">
+
+<br>
+
+<img src="./assets/github-progress.svg" alt="GitHub profile progress — verified portfolio bars and illustrative craft rhythm" width="100%">
+
+<br>
+
+<p align="center">
+  <a href="https://github.com/dev-mubaidjavaid">
+    <img src="https://github-readme-stats.vercel.app/api?username=dev-mubaidjavaid&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true&bg_color=F4F7FA&title_color=2A527A&icon_color=3878B0&text_color=121A28" alt="GitHub stats for dev-mubaidjavaid" height="165">
+  </a>
+  &nbsp;
+  <a href="https://github.com/dev-mubaidjavaid">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dev-mubaidjavaid&layout=compact&theme=default&hide_border=true&bg_color=F4F7FA&title_color=2A527A&text_color=121A28" alt="Top languages for dev-mubaidjavaid" height="165">
+  </a>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.svg">
@@ -222,11 +238,11 @@ MERN end to end: React interfaces, Express REST APIs, MongoDB schema design, aut
 <br>
 
 <p align="center">
-  <a href="mailto:mubaidjavaid97@gmail.com"><img src="./assets/buttons/btn-email.svg" alt="Email" height="44"></a>
+  <a href="mailto:mubaidjavaid97@gmail.com"><img src="./assets/buttons/btn-email.svg" alt="Email" height="64"></a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/m-ubaid-javaid-260735407"><img src="./assets/buttons/btn-linkedin.svg" alt="LinkedIn" height="44"></a>
+  <a href="https://www.linkedin.com/in/m-ubaid-javaid-260735407"><img src="./assets/buttons/btn-linkedin.svg" alt="LinkedIn" height="64"></a>
   &nbsp;
-  <a href="https://mubaidjavaid.vercel.app"><img src="./assets/buttons/btn-portfolio.svg" alt="Portfolio" height="44"></a>
+  <a href="https://mubaidjavaid.vercel.app"><img src="./assets/buttons/btn-portfolio.svg" alt="Portfolio" height="64"></a>
 </p>
 
 Open to freelance, contract, and full-time. Send the shape of the problem — I will tell you honestly if I am the right person.

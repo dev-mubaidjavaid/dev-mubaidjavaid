@@ -13,6 +13,11 @@ const BrandFitSignals = nextDynamic(() =>
 const BrandProof = nextDynamic(() =>
   import('@/components/brand/BrandProof').then(m => ({ default: m.BrandProof }))
 )
+const BrandSelectedWork = nextDynamic(() =>
+  import('@/components/brand/BrandSelectedWork').then(m => ({
+    default: m.BrandSelectedWork
+  }))
+)
 const BrandImpact = nextDynamic(() =>
   import('@/components/brand/BrandImpact').then(m => ({ default: m.BrandImpact }))
 )
@@ -70,6 +75,7 @@ export default function HomePage () {
       <BrandBuiltWith />
       <BrandFitSignals />
       <BrandProof />
+      <BrandSelectedWork />
       <BrandImpact />
       <BrandProcess />
       <BrandPhilosophy />

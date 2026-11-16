@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 
 const SECTIONS = [
   { href: '#proof', id: 'proof', label: 'Proof' },
+  { href: '#work', id: 'work', label: 'Work' },
   { href: '#impact', id: 'impact', label: 'Impact' },
   { href: '#process', id: 'process', label: 'Process' },
   { href: '#technologies', id: 'technologies', label: 'Stack' },

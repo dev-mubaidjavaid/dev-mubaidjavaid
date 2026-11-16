@@ -370,22 +370,22 @@ def hero(dark: bool) -> str:
   <text x="48" y="108" fill="{name}" font-family="{FONT}" font-size="42" font-weight="700" letter-spacing="-0.8">M Ubaid Javaid</text>
   <text x="48" y="142" fill="{sub}" font-family="{FONT}" font-size="16">I engineer production web products — SaaS, fintech, healthcare, and ops platforms.</text>
   <text x="48" y="168" fill="{sub}" font-family="{FONT}" font-size="14">MERN / Next.js · Multan, Pakistan · Evolvo Technologies</text>
-  <g transform="translate(48 186)">
-    <g transform="scale(0.85)">{tech_mark_react()[3:]}
-    <g transform="translate(30 0) scale(0.85)">{tech_mark_ts()[3:]}
-    <g transform="translate(60 0) scale(0.85)">{tech_mark_node()[3:]}
-    <g transform="translate(90 0) scale(0.85)">{tech_mark_mongo()[3:]}
-    <g transform="translate(120 0) scale(0.85)">{tech_mark_next()[3:]}
+  <g transform="translate(48 182)">
+    <g transform="scale(1.35)">{tech_mark_react()}</g>
+    <g transform="translate(40 0) scale(1.35)">{tech_mark_ts()}</g>
+    <g transform="translate(80 0) scale(1.35)">{tech_mark_node()}</g>
+    <g transform="translate(120 0) scale(1.35)">{tech_mark_mongo()}</g>
+    <g transform="translate(160 0) scale(1.35)">{tech_mark_next()}</g>
   </g>
-  <g transform="translate(660 48)">
-    <rect width="180" height="144" rx="8" fill="{panel_fill}" fill-opacity="{panel_opacity}" stroke="{accent}" stroke-opacity="0.45"/>
-    <text x="16" y="28" fill="{role}" font-family="{MONO}" font-size="10" letter-spacing="1.2">FOCUS</text>
-    {icon_cloud(16, 40, 0.7)}
-    <text x="44" y="58" fill="{name}" font-family="{FONT}" font-size="13" font-weight="600">Multi-tenant SaaS</text>
-    {icon_offline(16, 72, 0.7)}
-    <text x="44" y="90" fill="{name}" font-family="{FONT}" font-size="13" font-weight="600">Ops dashboards</text>
-    {icon_shield(16, 104, 0.7)}
-    <text x="44" y="122" fill="{name}" font-family="{FONT}" font-size="13" font-weight="600">API architecture</text>
+  <g transform="translate(640 40)">
+    <rect width="204" height="160" rx="14" fill="{panel_fill}" fill-opacity="{panel_opacity}" stroke="{accent}" stroke-opacity="0.5"/>
+    <text x="18" y="30" fill="{role}" font-family="{MONO}" font-size="11" letter-spacing="1.4">FOCUS</text>
+    {icon_cloud(18, 44, 1.15)}
+    <text x="54" y="66" fill="{name}" font-family="{FONT}" font-size="14" font-weight="700">Multi-tenant SaaS</text>
+    {icon_offline(18, 80, 1.15)}
+    <text x="54" y="102" fill="{name}" font-family="{FONT}" font-size="14" font-weight="700">Ops dashboards</text>
+    {icon_shield(18, 116, 1.15)}
+    <text x="54" y="138" fill="{name}" font-family="{FONT}" font-size="14" font-weight="700">API architecture</text>
   </g>
 </svg>'''
 
@@ -404,9 +404,10 @@ def divider(dark: bool) -> str:
 def kicker(label: str, filename: str, icon_fn) -> None:
     write(
         f"kickers/{filename}",
-        f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="44" viewBox="0 0 880 44" role="img" aria-label="{label}">
-  {icon_fn(0, 10, 1)}
-  <text x="36" y="28" fill="{PRIMARY}" font-family="{MONO}" font-size="13" font-weight="600" letter-spacing="2.2">{label.upper()}</text>
+        f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" role="img" aria-label="{label}">
+  <rect x="0" y="8" width="48" height="48" rx="14" fill="{MUTED}" stroke="{BORDER}"/>
+  {icon_fn(8, 16, 1.65)}
+  <text x="64" y="42" fill="{PRIMARY}" font-family="{MONO}" font-size="16" font-weight="700" letter-spacing="2.6">{label.upper()}</text>
 </svg>''',
     )
 
@@ -417,36 +418,40 @@ def button(label: str, filename: str, icon_fn, filled: bool = False) -> None:
     text = PAPER if filled else INK
     write(
         f"buttons/{filename}",
-        f'''<svg xmlns="http://www.w3.org/2000/svg" width="176" height="48" viewBox="0 0 176 48" role="img" aria-label="{label}">
-  <rect x="0.75" y="0.75" width="174.5" height="46.5" rx="8" fill="{fill}" stroke="{stroke}" stroke-width="1.5"/>
-  {icon_fn(12, 12, 1)}
-  <text x="48" y="30" fill="{text}" font-family="{FONT}" font-size="14" font-weight="700">{label}</text>
+        f'''<svg xmlns="http://www.w3.org/2000/svg" width="220" height="64" viewBox="0 0 220 64" role="img" aria-label="{label}">
+  <rect x="0.75" y="0.75" width="218.5" height="62.5" rx="14" fill="{fill}" stroke="{stroke}" stroke-width="2.5"/>
+  {icon_fn(16, 16, 1.55)}
+  <text x="62" y="40" fill="{text}" font-family="{FONT}" font-size="17" font-weight="700">{label}</text>
 </svg>''',
     )
 
 
-def strip(title: str, items: list[tuple[str, str, str]], filename: str, height: int = 132) -> None:
+STRIP_BG = ["#EFF6FF", "#F5F3FF", "#FDF2F8", "#ECFDF5", "#FFFBEB", "#F0F9FF"]
+
+
+def strip(title: str, items: list[tuple[str, str, str]], filename: str, height: int = 176) -> None:
     """items: (headline, sub, icon_svg_at_origin)"""
     n = len(items)
-    gap = 12
+    gap = 14
     pad = 20
     usable = 880 - pad * 2 - gap * (n - 1)
     w = usable / n
     cards = []
     for i, (h, sub, ic) in enumerate(items):
         x = pad + i * (w + gap)
+        bg = STRIP_BG[i % len(STRIP_BG)]
         cards.append(
-            f'''  <rect x="{x:.1f}" y="44" width="{w:.1f}" height="72" rx="8" fill="{MUTED}" stroke="{BORDER}"/>
-  <g transform="translate({x + 12:.1f} 56) scale(0.9)">{ic}</g>
-  <text x="{x + 44:.1f}" y="74" fill="{INK}" font-family="{FONT}" font-size="14" font-weight="700">{h}</text>
-  <text x="{x + 44:.1f}" y="96" fill="{BODY}" font-family="{FONT}" font-size="12">{sub}</text>'''
+            f'''  <rect x="{x:.1f}" y="48" width="{w:.1f}" height="108" rx="16" fill="{bg}" stroke="{BORDER}"/>
+  <g transform="translate({x + 14:.1f} 60) scale(1.7)">{ic}</g>
+  <text x="{x + 64:.1f}" y="90" fill="{INK}" font-family="{FONT}" font-size="16" font-weight="700">{h}</text>
+  <text x="{x + 64:.1f}" y="116" fill="{BODY}" font-family="{FONT}" font-size="13">{sub}</text>'''
         )
     write(
         filename,
         f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="{height}" viewBox="0 0 880 {height}" role="img" aria-labelledby="t">
   <title id="t">{title}</title>
-  <rect width="880" height="{height}" rx="4" fill="{SURFACE}" stroke="{BORDER}"/>
-  <text x="20" y="28" fill="{PRIMARY}" font-family="{MONO}" font-size="11" letter-spacing="1.6">{title.upper()}</text>
+  <rect width="880" height="{height}" rx="8" fill="{SURFACE}" stroke="{BORDER}"/>
+  <text x="20" y="30" fill="{PRIMARY}" font-family="{MONO}" font-size="12" letter-spacing="1.8">{title.upper()}</text>
 {chr(10).join(cards)}
 </svg>''',
     )
@@ -459,28 +464,84 @@ def card(code: str, title: str, blurb: list[str], meta: str, filename: str, acce
     )
     write(
         f"cards/{filename}",
-        f'''<svg xmlns="http://www.w3.org/2000/svg" width="520" height="248" viewBox="0 0 520 248" role="img" aria-labelledby="t">
+        f'''<svg xmlns="http://www.w3.org/2000/svg" width="520" height="268" viewBox="0 0 520 268" role="img" aria-labelledby="t">
   <title id="t">{code} — {title}</title>
   <defs>
     <linearGradient id="g{code}" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="{accent}" stop-opacity="0.14"/>
+      <stop offset="0%" stop-color="{accent}" stop-opacity="0.22"/>
       <stop offset="100%" stop-color="{SURFACE}" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="0.75" y="0.75" width="518.5" height="246.5" rx="10" fill="{SURFACE}" stroke="{BORDER}" stroke-width="1.5"/>
-  <rect x="0.75" y="0.75" width="518.5" height="246.5" rx="10" fill="url(#g{code})"/>
-  <rect x="0" y="0" width="6" height="248" fill="{accent}"/>
-  <text x="24" y="40" fill="{accent}" font-family="{MONO}" font-size="12" font-weight="600" letter-spacing="1.8">{code}</text>
-  <text x="24" y="76" fill="{INK}" font-family="{FONT}" font-size="22" font-weight="700">{title}</text>
-  <text x="24" y="102" fill="{BODY}" font-family="{FONT}" font-size="12">{meta}</text>
-  <text x="24" y="138" fill="{BODY}" font-family="{FONT}" font-size="13">
+  <rect x="0.75" y="0.75" width="518.5" height="266.5" rx="14" fill="{SURFACE}" stroke="{BORDER}" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="518.5" height="266.5" rx="14" fill="url(#g{code})"/>
+  <rect x="0" y="0" width="8" height="268" fill="{accent}"/>
+  <text x="24" y="42" fill="{accent}" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="1.8">{code}</text>
+  <text x="24" y="80" fill="{INK}" font-family="{FONT}" font-size="24" font-weight="700">{title}</text>
+  <text x="24" y="108" fill="{BODY}" font-family="{FONT}" font-size="13">{meta}</text>
+  <text x="24" y="144" fill="{BODY}" font-family="{FONT}" font-size="14">
 {tspans}
   </text>
-  <text x="24" y="222" fill="{accent}" font-family="{FONT}" font-size="13" font-weight="700">Case study →</text>
-  <rect x="340" y="36" width="156" height="156" rx="16" fill="{MUTED}" stroke="{accent}" stroke-opacity="0.35"/>
-  {icon_fn(378, 74, 3.2)}
+  <text x="24" y="240" fill="{accent}" font-family="{FONT}" font-size="14" font-weight="700">Case study →</text>
+  <rect x="318" y="28" width="180" height="180" rx="24" fill="{MUTED}" stroke="{accent}" stroke-width="2.5" stroke-opacity="0.5"/>
+  {icon_fn(346, 56, 5.1)}
 </svg>''',
     )
+
+
+def github_progress() -> str:
+    """Verified portfolio progress + creative activity board (not fake commit counts)."""
+    rows = [
+        ("Case studies documented", 6, 6, "#0D9488", icon_policy),
+        ("Verified engineering roles", 2, 2, "#7C3AED", icon_briefcase),
+        ("Featured production systems", 6, 6, "#0369A1", icon_cloud),
+        ("Public portfolio + writing", 4, 4, "#DB2777", icon_globe),
+    ]
+    parts = []
+    for i, (label, done, total, color, ic) in enumerate(rows):
+        y = 64 + i * 56
+        bar_w = 640 * (done / total)
+        parts.append(
+            f'''  <rect x="28" y="{y}" width="824" height="48" rx="14" fill="{MUTED}"/>
+  {ic(42, y + 10, 1.5)}
+  <text x="100" y="{y + 22}" fill="{INK}" font-family="{FONT}" font-size="15" font-weight="700">{label}</text>
+  <text x="820" y="{y + 22}" text-anchor="end" fill="{color}" font-family="{MONO}" font-size="14" font-weight="700">{done}/{total}</text>
+  <rect x="100" y="{y + 32}" width="640" height="10" rx="5" fill="#E2E8F0"/>
+  <rect x="100" y="{y + 32}" width="{bar_w:.0f}" height="10" rx="5" fill="{color}"/>'''
+        )
+
+    cells = []
+    levels = [
+        0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1, 0, 2, 3, 4, 3, 1, 0, 1, 3, 4, 4, 3, 2, 1,
+        0, 1, 2, 3, 2, 0, 0, 2, 3, 4, 3, 2, 1, 0, 1, 2, 3, 4, 2, 1, 0, 0, 1, 3, 4, 3, 2, 1,
+        1, 2, 3, 4, 3, 2, 1, 0, 1, 2, 4, 3, 2, 1, 0, 2, 3, 4, 2, 1, 0, 1, 2, 3, 4, 3, 1, 0,
+    ]
+    palette = ["#E2E8F0", "#93C5FD", "#3B82F6", "#1D4ED8", "#2A527A"]
+    for i, lv in enumerate(levels[:84]):
+        col = i % 28
+        row = i // 28
+        cells.append(
+            f'<rect x="{28 + col * 30}" y="{300 + row * 30}" width="26" height="26" rx="6" fill="{palette[lv]}"/>'
+        )
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420" role="img" aria-labelledby="t d">
+  <title id="t">Engineering progress and craft rhythm</title>
+  <desc id="d">Verified portfolio progress bars plus an illustrative craft-rhythm board. Not a live GitHub contribution graph.</desc>
+  <defs>
+    <linearGradient id="gpHead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2A527A"/>
+      <stop offset="100%" stop-color="#3878B0"/>
+    </linearGradient>
+  </defs>
+  <rect width="880" height="420" rx="12" fill="{SURFACE}" stroke="{BORDER}"/>
+  <rect width="880" height="48" rx="12" fill="url(#gpHead)"/>
+  <rect y="24" width="880" height="24" fill="url(#gpHead)"/>
+  <text x="28" y="32" fill="#F4F7FA" font-family="{FONT}" font-size="18" font-weight="700">GitHub profile progress</text>
+  <text x="852" y="32" text-anchor="end" fill="#DBEAFE" font-family="{MONO}" font-size="11">VERIFIED · PORTFOLIO</text>
+{chr(10).join(parts)}
+  <text x="28" y="288" fill="{PRIMARY}" font-family="{MONO}" font-size="11" letter-spacing="1.4">CRAFT RHYTHM · ILLUSTRATIVE PATTERN</text>
+{chr(10).join(cells)}
+  <text x="28" y="408" fill="{BODY}" font-family="{FONT}" font-size="11">Bars match published case studies, roles, and portfolio surfaces — not invented commit totals.</text>
+</svg>'''
 
 
 def architecture() -> str:
@@ -596,31 +657,31 @@ def delivery() -> str:
 
 def stack_visual() -> str:
     badges = [
-        (20, 52, "React", tech_mark_react()),
-        (96, 52, "TypeScript", tech_mark_ts()),
-        (172, 52, "Next.js", tech_mark_next()),
-        (248, 52, "Node.js", tech_mark_node()),
-        (324, 52, "Express", tech_mark_express()),
-        (400, 52, "MongoDB", tech_mark_mongo()),
-        (476, 52, "Firebase", tech_mark_firebase()),
-        (552, 52, "Tailwind", tech_mark_tailwind()),
-        (628, 52, "Docker", tech_mark_docker()),
-        (704, 52, "Vercel", tech_mark_vercel()),
-        (780, 52, "Git", tech_mark_git()),
+        (16, 48, "React", tech_mark_react(), "#E0F2FE"),
+        (94, 48, "TypeScript", tech_mark_ts(), "#DBEAFE"),
+        (172, 48, "Next.js", tech_mark_next(), "#F1F5F9"),
+        (250, 48, "Node.js", tech_mark_node(), "#DCFCE7"),
+        (328, 48, "Express", tech_mark_express(), "#F3F4F6"),
+        (406, 48, "MongoDB", tech_mark_mongo(), "#DCFCE7"),
+        (484, 48, "Firebase", tech_mark_firebase(), "#FEF3C7"),
+        (562, 48, "Tailwind", tech_mark_tailwind(), "#CFFAFE"),
+        (640, 48, "Docker", tech_mark_docker(), "#E0F2FE"),
+        (718, 48, "Vercel", tech_mark_vercel(), "#F1F5F9"),
+        (796, 48, "Git", tech_mark_git(), "#FEE2E2"),
     ]
     parts = []
-    for x, y, name, mark in badges:
+    for x, y, name, mark, bg in badges:
         parts.append(
             f'''  <g transform="translate({x} {y})">
-    <rect width="68" height="70" rx="10" fill="{MUTED}" stroke="{BORDER}"/>
-    <g transform="translate(22 10)">{mark}</g>
-    <text x="34" y="58" text-anchor="middle" fill="{INK}" font-family="{FONT}" font-size="9" font-weight="600">{name}</text>
+    <rect width="72" height="96" rx="14" fill="{bg}" stroke="{BORDER}"/>
+    <g transform="translate(16 14) scale(1.65)">{mark}</g>
+    <text x="36" y="82" text-anchor="middle" fill="{INK}" font-family="{FONT}" font-size="11" font-weight="700">{name}</text>
   </g>'''
         )
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150" role="img" aria-labelledby="t">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="170" viewBox="0 0 880 170" role="img" aria-labelledby="t">
   <title id="t">Technology stack with brand icons</title>
-  <rect width="880" height="150" rx="4" fill="{SURFACE}" stroke="{BORDER}"/>
-  <text x="20" y="28" fill="{PRIMARY}" font-family="{MONO}" font-size="11" letter-spacing="1.6">STACK — ORIGINAL COLOR ICONS</text>
+  <rect width="880" height="170" rx="8" fill="{SURFACE}" stroke="{BORDER}"/>
+  <text x="20" y="28" fill="{PRIMARY}" font-family="{MONO}" font-size="12" letter-spacing="1.8">STACK — LARGE COLOR ICONS</text>
 {chr(10).join(parts)}
 </svg>'''
 
@@ -672,7 +733,7 @@ def main() -> None:
             ("Fiesta Content Solutions", "Jul 2024 – Jan 2026", icon_briefcase(0, 0, 1)),
         ],
         "experience-strip.svg",
-        height=140,
+        height=176,
     )
     strip(
         "Writing",
@@ -721,6 +782,7 @@ def main() -> None:
     write("diagrams/architecture.svg", architecture())
     write("diagrams/auth-flow.svg", auth_flow())
     write("diagrams/delivery.svg", delivery())
+    write("github-progress.svg", github_progress())
     print("done")
 
 

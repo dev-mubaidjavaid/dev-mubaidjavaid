@@ -1,38 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="132" viewBox="0 0 880 132" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="176" viewBox="0 0 880 176" role="img" aria-labelledby="t">
   <title id="t">Evidence — not invented metrics</title>
-  <rect width="880" height="132" rx="4" fill="#FFFFFF" stroke="#D8E0EA"/>
-  <text x="20" y="28" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="1.6">EVIDENCE — NOT INVENTED METRICS</text>
-  <rect x="20.0" y="44" width="201.0" height="72" rx="8" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <g transform="translate(32.0 56) scale(0.9)"><g transform="translate(0 0) scale(1)">
+  <rect width="880" height="176" rx="8" fill="#FFFFFF" stroke="#D8E0EA"/>
+  <text x="20" y="30" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">EVIDENCE — NOT INVENTED METRICS</text>
+  <rect x="20.0" y="48" width="199.5" height="108" rx="16" fill="#EFF6FF" stroke="#D8E0EA"/>
+  <g transform="translate(34.0 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
   <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" fill="#2563EB"/>
   <path d="M15 3v5h5" fill="#1D4ED8"/>
   <path d="M8 13h8M8 16h6" stroke="#DBEAFE" stroke-width="1.5" stroke-linecap="round"/>
 </g></g>
-  <text x="64.0" y="74" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">6</text>
-  <text x="64.0" y="96" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Written case studies</text>
-  <rect x="233.0" y="44" width="201.0" height="72" rx="8" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <g transform="translate(245.0 56) scale(0.9)"><g transform="translate(0 0) scale(1)">
+  <text x="84.0" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">6</text>
+  <text x="84.0" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Written case studies</text>
+  <rect x="233.5" y="48" width="199.5" height="108" rx="16" fill="#F5F3FF" stroke="#D8E0EA"/>
+  <g transform="translate(247.5 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
   <rect x="2" y="8" width="20" height="13" rx="2" fill="#D97706"/>
   <rect x="8" y="4" width="8" height="5" rx="1.5" fill="#B45309"/>
   <path d="M2 13h20" stroke="#FDE68A" stroke-width="1.5"/>
   <rect x="10" y="12" width="4" height="3" rx="0.8" fill="#FDE68A"/>
 </g></g>
-  <text x="277.0" y="74" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">2</text>
-  <text x="277.0" y="96" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Verified roles</text>
-  <rect x="446.0" y="44" width="201.0" height="72" rx="8" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <g transform="translate(458.0 56) scale(0.9)"><g transform="translate(0 0) scale(1)">
+  <text x="297.5" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">2</text>
+  <text x="297.5" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Verified roles</text>
+  <rect x="447.0" y="48" width="199.5" height="108" rx="16" fill="#FDF2F8" stroke="#D8E0EA"/>
+  <g transform="translate(461.0 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
   <path d="M7 17h11a4 4 0 00.4-8A6 6 0 006.2 11 3.8 3.8 0 007 17z" fill="#0EA5E9"/>
   <circle cx="9" cy="12" r="1" fill="#E0F2FE"/>
   <circle cx="13" cy="11" r="1" fill="#E0F2FE"/>
   <circle cx="17" cy="13" r="1" fill="#E0F2FE"/>
 </g></g>
-  <text x="490.0" y="74" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">50+</text>
-  <text x="490.0" y="96" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Evolvo sites attributed</text>
-  <rect x="659.0" y="44" width="201.0" height="72" rx="8" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <g transform="translate(671.0 56) scale(0.9)"><g transform="translate(0 0) scale(1)">
+  <text x="511.0" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">50+</text>
+  <text x="511.0" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Evolvo sites attributed</text>
+  <rect x="660.5" y="48" width="199.5" height="108" rx="16" fill="#ECFDF5" stroke="#D8E0EA"/>
+  <g transform="translate(674.5 60) scale(1.7)"><g transform="translate(0 0) scale(1)">
   <circle cx="12" cy="12" r="10" fill="#16A34A"/>
   <path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g></g>
-  <text x="703.0" y="74" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">0</text>
-  <text x="703.0" y="96" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Invented testimonials</text>
+  <text x="724.5" y="90" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700">0</text>
+  <text x="724.5" y="116" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Invented testimonials</text>
 </svg>

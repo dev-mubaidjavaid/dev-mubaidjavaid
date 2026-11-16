@@ -1,24 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="248" viewBox="0 0 520 248" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="268" viewBox="0 0 520 268" role="img" aria-labelledby="t">
   <title id="t">SURGI — Surgical Ops</title>
   <defs>
     <linearGradient id="gSURGI" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#059669" stop-opacity="0.14"/>
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.22"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="0.75" y="0.75" width="518.5" height="246.5" rx="10" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1.5"/>
-  <rect x="0.75" y="0.75" width="518.5" height="246.5" rx="10" fill="url(#gSURGI)"/>
-  <rect x="0" y="0" width="6" height="248" fill="#059669"/>
-  <text x="24" y="40" fill="#059669" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" letter-spacing="1.8">SURGI</text>
-  <text x="24" y="76" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="700">Surgical Ops</text>
-  <text x="24" y="102" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Evolvo delivery · Live product</text>
-  <text x="24" y="138" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">
+  <rect x="0.75" y="0.75" width="518.5" height="266.5" rx="14" fill="#FFFFFF" stroke="#D8E0EA" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="518.5" height="266.5" rx="14" fill="url(#gSURGI)"/>
+  <rect x="0" y="0" width="8" height="268" fill="#059669"/>
+  <text x="24" y="42" fill="#059669" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="1.8">SURGI</text>
+  <text x="24" y="80" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Surgical Ops</text>
+  <text x="24" y="108" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Evolvo delivery · Live product</text>
+  <text x="24" y="144" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14">
     <tspan x="24" dy="0">Surgical management surfaces delivered</tspan>
     <tspan x="24" dy="18">as Evolvo client production work.</tspan>
   </text>
-  <text x="24" y="222" fill="#059669" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Case study →</text>
-  <rect x="340" y="36" width="156" height="156" rx="16" fill="#EEF2F6" stroke="#059669" stroke-opacity="0.35"/>
-  <g transform="translate(378 74) scale(3.2)">
+  <text x="24" y="240" fill="#059669" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Case study →</text>
+  <rect x="318" y="28" width="180" height="180" rx="24" fill="#EEF2F6" stroke="#059669" stroke-width="2.5" stroke-opacity="0.5"/>
+  <g transform="translate(346 56) scale(5.1)">
   <circle cx="12" cy="12" r="10" fill="#059669"/>
   <rect x="11" y="5" width="2.2" height="14" rx="1" fill="#ECFDF5"/>
   <rect x="5" y="11" width="14" height="2.2" rx="1" fill="#ECFDF5"/>
