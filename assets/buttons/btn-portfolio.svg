@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="176" height="44" viewBox="0 0 176 44" role="img" aria-label="Portfolio">
-  <rect x="0.75" y="0.75" width="174.5" height="42.5" rx="2" fill="#2A527A" stroke="#2A527A" stroke-width="1.5"/>
-  <rect x="10" y="10" width="24" height="24" rx="2" fill="#234568"/>
-  <path d="M18 22h8M22 18v8" stroke="#F4F7FA" stroke-width="1.6" stroke-linecap="round"/>
-  <text x="44" y="28" fill="#F4F7FA" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Portfolio</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="48" viewBox="0 0 176 48" role="img" aria-label="Portfolio">
+  <rect x="0.75" y="0.75" width="174.5" height="46.5" rx="8" fill="#2A527A" stroke="#2A527A" stroke-width="1.5"/>
+  <g transform="translate(12 12) scale(1)">
+  <circle cx="12" cy="12" r="10" fill="#2A527A"/>
+  <ellipse cx="12" cy="12" rx="4" ry="10" fill="none" stroke="#fff" stroke-width="1.4"/>
+  <path d="M2 12h20M4.5 7h15M4.5 17h15" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+</g>
+  <text x="48" y="30" fill="#F4F7FA" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Portfolio</text>
 </svg>

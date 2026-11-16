@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="24" viewBox="0 0 880 24" role="presentation" aria-hidden="true">
-  <line x1="0" y1="12" x2="400" y2="12" stroke="#D8E0EA" stroke-width="1"/>
-  <rect x="432" y="9" width="16" height="6" fill="#2A527A"/>
-  <line x1="480" y1="12" x2="880" y2="12" stroke="#D8E0EA" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" role="presentation" aria-hidden="true">
+  <line x1="0" y1="14" x2="392" y2="14" stroke="#D8E0EA" stroke-width="1"/>
+  <circle cx="440" cy="14" r="5" fill="#2A527A"/>
+  <circle cx="440" cy="14" r="2" fill="#FFFFFF"/>
+  <line x1="488" y1="14" x2="880" y2="14" stroke="#D8E0EA" stroke-width="1"/>
 </svg>

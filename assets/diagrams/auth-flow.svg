@@ -1,25 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="180" viewBox="0 0 880 180" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="190" viewBox="0 0 880 190" role="img" aria-labelledby="t">
   <title id="t">Auth to role to tenant to policy to action</title>
-  <rect width="880" height="180" rx="4" fill="#FFFFFF" stroke="#D8E0EA"/>
+  <rect width="880" height="190" rx="4" fill="#FFFFFF" stroke="#D8E0EA"/>
   <text x="28" y="36" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Authorization path</text>
   <text x="28" y="54" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">From identity to a permitted, tenant-scoped write</text>
-  <rect x="28" y="72" width="148" height="72" rx="2" fill="#EEF2F6" stroke="#2A527A"/>
-  <text x="102" y="102" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Auth</text>
-  <text x="102" y="124" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">JWT / session</text>
-  <text x="182" y="112" fill="#D8E0EA" font-size="16">→</text>
-  <rect x="196" y="72" width="148" height="72" rx="2" fill="#F4F7FA" stroke="#D8E0EA"/>
-  <text x="270" y="102" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Role</text>
-  <text x="270" y="124" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">RBAC claims</text>
-  <text x="350" y="112" fill="#D8E0EA" font-size="16">→</text>
-  <rect x="364" y="72" width="148" height="72" rx="2" fill="#F4F7FA" stroke="#D8E0EA"/>
-  <text x="438" y="102" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Tenant</text>
-  <text x="438" y="124" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">Scope boundary</text>
-  <text x="518" y="112" fill="#D8E0EA" font-size="16">→</text>
-  <rect x="532" y="72" width="148" height="72" rx="2" fill="#F4F7FA" stroke="#D8E0EA"/>
-  <text x="606" y="102" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Policy</text>
-  <text x="606" y="124" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">ABAC rules</text>
-  <text x="686" y="112" fill="#D8E0EA" font-size="16">→</text>
-  <rect x="700" y="72" width="148" height="72" rx="2" fill="#EEF2F6" stroke="#2A527A"/>
-  <text x="774" y="102" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Action</text>
-  <text x="774" y="124" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">Persisted outcome</text>
+  <rect x="28" y="68" width="148" height="90" rx="10" fill="#FFFBEB" stroke="#D97706"/>
+  <g transform="translate(90 78) scale(0.95)">
+  <circle cx="9" cy="10" r="5" fill="#F59E0B"/>
+  <circle cx="9" cy="10" r="2" fill="#FEF3C7"/>
+  <rect x="12.5" y="8.5" width="9" height="3" rx="1.2" fill="#D97706"/>
+  <rect x="18" y="11.5" width="1.8" height="3" rx="0.6" fill="#D97706"/>
+  <rect x="15.2" y="11.5" width="1.8" height="2.2" rx="0.6" fill="#B45309"/>
+</g>
+  <text x="102" y="128" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Auth</text>
+  <text x="102" y="146" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">JWT / session</text>
+  <text x="182" y="118" fill="#D8E0EA" font-size="16">→</text>
+  <rect x="196" y="68" width="148" height="90" rx="10" fill="#F5F3FF" stroke="#8B5CF6"/>
+  <g transform="translate(258 78) scale(0.95)">
+  <rect x="4" y="4" width="16" height="16" rx="3" fill="#8B5CF6"/>
+  <path d="M8 12h8M12 8v8" stroke="#EDE9FE" stroke-width="2" stroke-linecap="round"/>
+</g>
+  <text x="270" y="128" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Role</text>
+  <text x="270" y="146" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">RBAC claims</text>
+  <text x="350" y="118" fill="#D8E0EA" font-size="16">→</text>
+  <rect x="364" y="68" width="148" height="90" rx="10" fill="#F0FDFA" stroke="#0D9488"/>
+  <g transform="translate(426 78) scale(0.95)">
+  <rect x="3" y="5" width="8" height="14" rx="1.5" fill="#0D9488"/>
+  <rect x="13" y="5" width="8" height="14" rx="1.5" fill="#14B8A6"/>
+  <rect x="5" y="8" width="4" height="2" fill="#CCFBF1"/>
+  <rect x="15" y="8" width="4" height="2" fill="#CCFBF1"/>
+  <rect x="5" y="12" width="4" height="2" fill="#99F6E4"/>
+  <rect x="15" y="12" width="4" height="2" fill="#99F6E4"/>
+</g>
+  <text x="438" y="128" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Tenant</text>
+  <text x="438" y="146" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">Scope boundary</text>
+  <text x="518" y="118" fill="#D8E0EA" font-size="16">→</text>
+  <rect x="532" y="68" width="148" height="90" rx="10" fill="#EFF6FF" stroke="#2563EB"/>
+  <g transform="translate(594 78) scale(0.95)">
+  <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" fill="#2563EB"/>
+  <path d="M15 3v5h5" fill="#1D4ED8"/>
+  <path d="M8 13h8M8 16h6" stroke="#DBEAFE" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+  <text x="606" y="128" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Policy</text>
+  <text x="606" y="146" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">ABAC rules</text>
+  <text x="686" y="118" fill="#D8E0EA" font-size="16">→</text>
+  <rect x="700" y="68" width="148" height="90" rx="10" fill="#F0FDF4" stroke="#16A34A"/>
+  <g transform="translate(762 78) scale(0.95)">
+  <circle cx="12" cy="12" r="10" fill="#16A34A"/>
+  <path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+  <text x="774" y="128" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Action</text>
+  <text x="774" y="146" text-anchor="middle" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11">Persisted write</text>
 </svg>

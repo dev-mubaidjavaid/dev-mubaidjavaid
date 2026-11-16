@@ -1,17 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="120" viewBox="0 0 880 120" role="img" aria-labelledby="t">
-  <title id="t">Stack map</title>
-  <rect width="880" height="120" rx="4" fill="#FFFFFF" stroke="#D8E0EA"/>
-  <text x="20" y="28" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="1.6">STACK MAP</text>
-  <rect x="20.0" y="48" width="201.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <text x="34.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Core</text>
-  <text x="34.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">TypeScript · Node.js</text>
-  <rect x="233.0" y="48" width="201.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <text x="247.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Interface</text>
-  <text x="247.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">React · Next.js · Tailwind</text>
-  <rect x="446.0" y="48" width="201.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <text x="460.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Server &amp; data</text>
-  <text x="460.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Express · Mongo · Firebase</text>
-  <rect x="659.0" y="48" width="201.0" height="56" rx="2" fill="#EEF2F6" stroke="#D8E0EA"/>
-  <text x="673.0" y="72" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Platform</text>
-  <text x="673.0" y="92" fill="#566374" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Vercel · Docker · GitHub</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150" role="img" aria-labelledby="t">
+  <title id="t">Technology stack with brand icons</title>
+  <rect width="880" height="150" rx="4" fill="#FFFFFF" stroke="#D8E0EA"/>
+  <text x="20" y="28" fill="#2A527A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="1.6">STACK — ORIGINAL COLOR ICONS</text>
+  <g transform="translate(20 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <circle cx="12" cy="12" r="2.2" fill="#61DAFB"/>
+  <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="1.4"/>
+  <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="1.4" transform="rotate(60 12 12)"/>
+  <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="1.4" transform="rotate(120 12 12)"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">React</text>
+  </g>
+  <g transform="translate(96 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <rect width="24" height="24" rx="3" fill="#3178C6"/>
+  <text x="12" y="16" text-anchor="middle" fill="#fff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="800">TS</text>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">TypeScript</text>
+  </g>
+  <g transform="translate(172 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <circle cx="12" cy="12" r="11" fill="#111"/>
+  <path d="M8 7h2.2l5.2 8.2V7H17v10h-2.1L9.6 8.7V17H8V7z" fill="#fff"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Next.js</text>
+  </g>
+  <g transform="translate(248 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <path d="M12 1.5l9 5.2v10.6L12 22.5 3 17.3V6.7L12 1.5z" fill="#339933"/>
+  <text x="12" y="15" text-anchor="middle" fill="#fff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" font-weight="800">N</text>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Node.js</text>
+  </g>
+  <g transform="translate(324 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <rect width="24" height="24" rx="4" fill="#2D2D2D"/>
+  <text x="12" y="15.5" text-anchor="middle" fill="#fff" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="7" font-weight="700">ex</text>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Express</text>
+  </g>
+  <g transform="translate(400 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <path d="M12 2c2 4 5 6.5 5 11 0 3-2 6-5 9-3-3-5-6-5-9 0-4.5 3-7 5-11z" fill="#47A248"/>
+  <path d="M12 8v12" stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">MongoDB</text>
+  </g>
+  <g transform="translate(476 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <path d="M6 18l2.2-12 3.2 6.2L14 5l4 13H6z" fill="#FFCA28"/>
+  <path d="M8.2 6L6 18h4.2L8.2 6z" fill="#FFA000"/>
+  <path d="M11.4 12.2L14 5l4 13h-5.2l-1.4-5.8z" fill="#F57C00"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Firebase</text>
+  </g>
+  <g transform="translate(552 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <path d="M6.5 13c1.2-4 3-6 5.5-6 1.9 0 3 1 4 2.5C17 11 18 12 19.5 12c1.6 0 2.8-1 3.5-2.5C21.8 13.5 20 15.5 17.5 15.5c-1.9 0-3-1-4-2.5C12.5 11.5 11.5 10.5 10 10.5c-1.6 0-2.8 1-3.5 2.5z" fill="#06B6D4"/>
+  <path d="M1 15.5c1.2-4 3-6 5.5-6 1.9 0 3 1 4 2.5 1 1.5 2 2.5 3.5 2.5 1.6 0 2.8-1 3.5-2.5C16.3 16 14.5 18 12 18c-1.9 0-3-1-4-2.5C7 14 6 13 4.5 13c-1.6 0-2.8 1-3.5 2.5z" fill="#06B6D4" opacity="0.75"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Tailwind</text>
+  </g>
+  <g transform="translate(628 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <rect x="3" y="11" width="4" height="3.2" rx="0.4" fill="#2496ED"/>
+  <rect x="7.5" y="11" width="4" height="3.2" rx="0.4" fill="#2496ED"/>
+  <rect x="12" y="11" width="4" height="3.2" rx="0.4" fill="#2496ED"/>
+  <rect x="7.5" y="7" width="4" height="3.2" rx="0.4" fill="#2496ED"/>
+  <rect x="12" y="7" width="4" height="3.2" rx="0.4" fill="#2496ED"/>
+  <rect x="16.5" y="11" width="4" height="3.2" rx="0.4" fill="#2496ED"/>
+  <path d="M3 15.5c0 2 3.5 3 9 3s9-1 9-3" fill="none" stroke="#149EED" stroke-width="1.2"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Docker</text>
+  </g>
+  <g transform="translate(704 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <path d="M12 4l9 16H3L12 4z" fill="#111"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Vercel</text>
+  </g>
+  <g transform="translate(780 52)">
+    <rect width="68" height="70" rx="10" fill="#EEF2F6" stroke="#D8E0EA"/>
+    <g transform="translate(22 10)"><g>
+  <circle cx="6" cy="18" r="2.4" fill="#F05032"/>
+  <circle cx="18" cy="18" r="2.4" fill="#F05032"/>
+  <circle cx="12" cy="6" r="2.4" fill="#F05032"/>
+  <path d="M6 18l6-12 6 12" fill="none" stroke="#F05032" stroke-width="2"/>
+</g></g>
+    <text x="34" y="58" text-anchor="middle" fill="#121A28" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="600">Git</text>
+  </g>
 </svg>
