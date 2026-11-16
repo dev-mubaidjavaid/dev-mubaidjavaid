@@ -66,3 +66,6 @@ temp_interactive_push.bat
 .claude/
 index.html
 
+# Local asset masters (not served — regenerated WebP lives in public/)
+archive/
+

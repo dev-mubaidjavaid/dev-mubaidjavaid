@@ -106,21 +106,15 @@ export default function RootLayout ({
   return (
     <html lang='en' className='light'>
       <head>
+        {/* Desktop ambient cutout only — not preloaded on mobile (portrait is md+). */}
         <link
           rel='preload'
           as='image'
-          href='/mubaidjavaid-hero-sm.webp'
-          type='image/webp'
-          media='(max-width: 767px)'
-          fetchPriority='high'
-        />
-        <link
-          rel='preload'
-          as='image'
-          href='/mubaidjavaid-hero.webp'
+          href='/mubaidjavaid-hero-cutout-480.webp?v=6'
           type='image/webp'
           media='(min-width: 768px)'
-          fetchPriority='high'
+          imageSrcSet='/mubaidjavaid-hero-cutout-480.webp?v=6 480w, /mubaidjavaid-hero-cutout-sm.webp?v=6 720w, /mubaidjavaid-hero-cutout-960.webp?v=6 960w'
+          imageSizes='min(480px, 42vw)'
         />
       </head>
       <body

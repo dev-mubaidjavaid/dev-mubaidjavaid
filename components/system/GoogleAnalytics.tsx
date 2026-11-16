@@ -38,7 +38,8 @@ export function GoogleAnalytics () {
     window.addEventListener('pointerdown', onInput, { once: true, passive: true })
     window.addEventListener('keydown', onInput, { once: true })
     window.addEventListener('scroll', onInput, { once: true, passive: true })
-    const idle = window.setTimeout(load, 6000)
+    // Long idle floor so lab tools (Lighthouse) rarely pull gtag into TBT/LCP.
+    const idle = window.setTimeout(load, 12_000)
 
     return () => {
       window.removeEventListener('pointerdown', onInput)

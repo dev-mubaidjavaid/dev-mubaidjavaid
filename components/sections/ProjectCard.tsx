@@ -33,21 +33,20 @@ export function ProjectCard ({ project }: { project: Project }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Image area with auto-rotate on hover */}
+      {/* Single active frame — avoids N image requests per card (hover rotates src). */}
       <div className='relative h-48 w-full overflow-hidden bg-secondary sm:h-52'>
-        {images.slice(0, 5).map((img, i) => (
-          <Image
-            key={img}
-            src={img}
-            alt={i === 0 ? (project.imageAlt || project.title) : `${project.title} screenshot ${i + 1}`}
-            fill
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-            className={`object-cover object-center transition-opacity duration-500 ${
-              i === imgIdx ? 'opacity-100' : 'opacity-0'
-            }`}
-            priority={i === 0}
-          />
-        ))}
+        <Image
+          key={images[imgIdx]}
+          src={encodeURI(images[imgIdx])}
+          alt={
+            imgIdx === 0
+              ? project.imageAlt || project.title
+              : `${project.title} screenshot ${imgIdx + 1}`
+          }
+          fill
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          className='object-cover object-center transition-opacity duration-500'
+        />
         <div className='absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent opacity-90' />
 
         {/* Image dots indicator */}

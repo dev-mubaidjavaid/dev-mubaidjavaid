@@ -28,7 +28,8 @@ export function selectedWorkProjects () {
 
 /** Impact — outcomes + images (frame index 1 so it differs from Selected Work). */
 export function impactOutcomes () {
-  return projects.slice(0, 6).map(p => ({
+  // Cap at 4 to keep homepage image requests lean (Pingdom: image weight dominated).
+  return projects.slice(0, 4).map(p => ({
     slug: p.slug,
     title: p.title.split('—')[0].trim(),
     line: p.impact[0],

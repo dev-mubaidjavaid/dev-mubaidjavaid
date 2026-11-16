@@ -11,10 +11,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function formatDate (iso: string) {
+  // Fixed locale + UTC avoids SSR/client hydration text mismatches (React #418).
   return new Date(iso).toLocaleDateString('en-US', {
     month: 'short',
     day: '2-digit',
-    year: 'numeric'
+    year: 'numeric',
+    timeZone: 'UTC'
   })
 }
 
@@ -75,7 +77,7 @@ export function BrandWriting () {
 
             <div className='relative mt-8 aspect-[16/10] w-full overflow-hidden border-y border-white/10 md:mt-10'>
               <Image
-                src='/writing-workbench.png'
+                src='/writing-workbench.webp'
                 alt='Overhead software engineering workbench with keyboard, laptop and architecture notebook'
                 fill
                 sizes='(max-width: 1024px) 100vw, 43vw'

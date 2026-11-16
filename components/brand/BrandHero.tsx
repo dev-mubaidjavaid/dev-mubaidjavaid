@@ -5,9 +5,19 @@ import { MotionRevealIn } from '@/components/brand/system/MotionReveal'
 import { heroContent, site } from '@/data/site'
 import { ArrowUpRight } from 'lucide-react'
 
+const HERO_CUTOUT = {
+  /** Displayed ~480px wide on desktop; 2x → prefer 960. */
+  srcSet:
+    '/mubaidjavaid-hero-cutout-480.webp?v=6 480w, /mubaidjavaid-hero-cutout-sm.webp?v=6 720w, /mubaidjavaid-hero-cutout-960.webp?v=6 960w',
+  sizes: '(max-width: 767px) 70vw, min(480px, 42vw)',
+  src: '/mubaidjavaid-hero-cutout-480.webp?v=6',
+  width: 480,
+  height: 850
+} as const
+
 /**
  * Hero — brand-first, one composition: name, positioning, value, CTAs, ink portrait.
- * Skills: frontend-design + emil-design-eng + animate (entrance via MotionRevealIn).
+ * Portrait is ambient (low opacity); keep it small + responsive so it cannot tank LCP.
  */
 export function BrandHero () {
   return (
@@ -35,25 +45,24 @@ export function BrandHero () {
         aria-hidden
       />
 
-      <div className='pointer-events-none absolute inset-y-0 right-0 w-[58%] max-w-2xl overflow-hidden'>
-        <picture>
-          <source
-            media='(min-width: 768px)'
-            srcSet='/mubaidjavaid-hero-cutout.webp?v=4'
-            type='image/webp'
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src='/mubaidjavaid-hero-cutout-sm.webp?v=4'
-            alt={`${site.name}, ${site.role} based in ${site.location}`}
-            width={1632}
-            height={2610}
-            fetchPriority='high'
-            decoding='async'
-            className='absolute inset-x-0 bottom-0 top-[10%] h-[90%] w-full object-contain object-bottom opacity-[0.38]'
-          />
-        </picture>
-        {/* Soft left + bottom blend into ink so the cutout stays quiet behind copy */}
+      {/* Desktop-only ambient portrait — skip on mobile so LCP stays on brand text. */}
+      <div
+        className='pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] max-w-2xl overflow-hidden md:block'
+        aria-hidden
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_CUTOUT.src}
+          srcSet={HERO_CUTOUT.srcSet}
+          sizes={HERO_CUTOUT.sizes}
+          alt=''
+          width={HERO_CUTOUT.width}
+          height={HERO_CUTOUT.height}
+          decoding='async'
+          loading='lazy'
+          fetchPriority='low'
+          className='absolute inset-x-0 bottom-0 top-[10%] h-[90%] w-full object-contain object-bottom opacity-[0.38]'
+        />
         <div
           className='absolute inset-0'
           style={{

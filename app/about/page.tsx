@@ -67,7 +67,7 @@ export default function AboutPage () {
             />
             <div className='relative aspect-[4/5] overflow-hidden bg-muted shadow-[0_35px_80px_-45px_hsl(215_35%_15%/0.55)]'>
               <Image
-                src='/mubaidjavaid-hero-banaer.jpg'
+                src='/mubaidjavaid-hero-banaer.webp'
                 alt={`${site.name}, Software Engineer in Multan`}
                 fill
                 sizes='(max-width: 1024px) 90vw, 430px'

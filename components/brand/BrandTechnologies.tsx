@@ -66,10 +66,10 @@ export function BrandTechnologies () {
                   onClick={() => setActive(i)}
                   onMouseEnter={() => setActive(i)}
                   className={cn(
-                    'px-3 py-2 text-xs font-medium tracking-wide transition-colors',
+                    'px-3 py-2 text-xs font-semibold tracking-wide transition-colors',
                     isActive
-                      ? 'bg-primary text-primary-foreground shadow-sm ring-2 ring-primary/30 ring-offset-2 ring-offset-muted'
-                      : 'border border-transparent text-muted-foreground hover:border-border hover:bg-background hover:text-heading'
+                      ? 'bg-[hsl(215_35%_12%)] text-white shadow-sm ring-2 ring-heading/20 ring-offset-2 ring-offset-muted'
+                      : 'border border-border/80 bg-background text-heading/80 hover:border-heading/30 hover:text-heading'
                   )}
                 >
                   {g.label}
