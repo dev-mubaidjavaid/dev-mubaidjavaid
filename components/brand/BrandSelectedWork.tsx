@@ -201,7 +201,7 @@ export function BrandSelectedWork () {
                       aria-hidden
                     />
                   </div>
-                  <span className='absolute left-6 top-6 z-10 bg-[hsl(215_35%_12%)] px-2.5 py-1.5 font-mono text-[11px] font-semibold tracking-wide text-white md:left-10 md:top-10'>
+                  <span className='absolute left-6 top-6 z-10 border border-white/25 bg-black px-2.5 py-1.5 font-mono text-xs font-semibold tracking-wide text-white md:left-10 md:top-10'>
                     {String(i + 1).padStart(2, '0')} /{' '}
                     {String(featured.length).padStart(2, '0')}
                   </span>

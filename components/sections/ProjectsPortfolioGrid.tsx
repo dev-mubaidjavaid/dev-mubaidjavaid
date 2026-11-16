@@ -127,7 +127,7 @@ export function ProjectsPortfolioGrid () {
                     aria-hidden
                   />
                 </div>
-                <span className='absolute left-5 top-5 z-10 bg-[hsl(215_35%_12%)] px-2.5 py-1.5 font-mono text-xs font-semibold tracking-wide text-white md:left-8 md:top-8'>
+                <span className='absolute left-5 top-5 z-10 border border-white/25 bg-black px-2.5 py-1.5 font-mono text-xs font-semibold tracking-wide text-white md:left-8 md:top-8'>
                   Case {String(i + 1).padStart(2, '0')}
                 </span>
               </div>

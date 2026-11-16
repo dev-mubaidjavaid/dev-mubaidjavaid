@@ -97,8 +97,9 @@ export function BrandTechnologies () {
               {group.items.map((item, i) => (
                 <motion.li
                   key={item.name}
-                  initial={reduce ? false : { opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  // Keep opacity at 1 so a11y contrast audits don't sample invisible text.
+                  initial={reduce ? false : { y: 10 }}
+                  animate={{ y: 0 }}
                   transition={{
                     duration: 0.35,
                     delay: reduce ? 0 : i * 0.03,
@@ -120,7 +121,7 @@ export function BrandTechnologies () {
                       className='!h-14 !w-14 object-contain sm:!h-16 sm:!w-16'
                     />
                   </span>
-                  <span className='text-center font-mono text-xs tracking-wide text-heading'>
+                  <span className='text-center font-mono text-xs font-medium tracking-wide text-[hsl(215_35%_12%)]'>
                     {item.name}
                   </span>
                 </motion.li>

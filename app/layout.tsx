@@ -40,7 +40,7 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
   variable: '--font-mono',
-  display: 'swap',
+  display: 'optional',
   preload: false
 })
 
@@ -113,6 +113,7 @@ export default function RootLayout ({
           href='/mubaidjavaid-hero-cutout-480.webp?v=6'
           type='image/webp'
           media='(min-width: 768px)'
+          fetchPriority='high'
           imageSrcSet='/mubaidjavaid-hero-cutout-480.webp?v=6 480w, /mubaidjavaid-hero-cutout-sm.webp?v=6 720w, /mubaidjavaid-hero-cutout-960.webp?v=6 960w'
           imageSizes='min(480px, 42vw)'
         />

@@ -1,12 +1,8 @@
-'use client'
-
 import { TrackedCtaLink } from '@/components/analytics/TrackedCtaLink'
-import { MotionRevealIn } from '@/components/brand/system/MotionReveal'
 import { heroContent, site } from '@/data/site'
 import { ArrowUpRight } from 'lucide-react'
 
 const HERO_CUTOUT = {
-  /** Displayed ~480px wide on desktop; 2x → prefer 960. */
   srcSet:
     '/mubaidjavaid-hero-cutout-480.webp?v=6 480w, /mubaidjavaid-hero-cutout-sm.webp?v=6 720w, /mubaidjavaid-hero-cutout-960.webp?v=6 960w',
   sizes: '(max-width: 767px) 70vw, min(480px, 42vw)',
@@ -16,8 +12,8 @@ const HERO_CUTOUT = {
 } as const
 
 /**
- * Hero — brand-first, one composition: name, positioning, value, CTAs, ink portrait.
- * Portrait is ambient (low opacity); keep it small + responsive so it cannot tank LCP.
+ * Hero — brand-first composition.
+ * No opacity-0 entrance on LCP text (MotionRevealIn delayed mobile LCP ~3.5s on Slow 4G).
  */
 export function BrandHero () {
   return (
@@ -45,7 +41,6 @@ export function BrandHero () {
         aria-hidden
       />
 
-      {/* Desktop-only ambient portrait — skip on mobile so LCP stays on brand text. */}
       <div
         className='pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] max-w-2xl overflow-hidden md:block'
         aria-hidden
@@ -59,8 +54,7 @@ export function BrandHero () {
           width={HERO_CUTOUT.width}
           height={HERO_CUTOUT.height}
           decoding='async'
-          loading='lazy'
-          fetchPriority='low'
+          fetchPriority='high'
           className='absolute inset-x-0 bottom-0 top-[10%] h-[90%] w-full object-contain object-bottom opacity-[0.38]'
         />
         <div
@@ -80,7 +74,7 @@ export function BrandHero () {
       </div>
 
       <div className='relative z-10 mx-auto flex min-h-[100svh] max-w-[1180px] flex-col justify-center px-6 pb-24 pt-28 md:px-10 lg:px-12'>
-        <MotionRevealIn className='max-w-xl lg:max-w-2xl'>
+        <div className='max-w-xl lg:max-w-2xl'>
           <p className='font-mono text-xs tracking-wide text-highlight-on-ink'>
             {site.role} · {site.roleSecondary} · {site.location}
           </p>
@@ -89,15 +83,15 @@ export function BrandHero () {
             {site.name}
           </p>
 
-          <h1 className='mt-6 max-w-[18ch] font-display text-[clamp(1.35rem,2.8vw,2rem)] font-semibold leading-[1.2] tracking-[-0.02em] text-white/95 text-pretty'>
+          <h1 className='mt-6 max-w-[18ch] font-display text-[clamp(1.35rem,2.8vw,2rem)] font-semibold leading-[1.2] tracking-[-0.02em] text-white text-pretty'>
             {heroContent.line}
           </h1>
 
-          <p className='mt-5 max-w-[42ch] text-base leading-relaxed text-white/65 md:text-lg'>
+          <p className='mt-5 max-w-[42ch] text-base leading-relaxed text-white/80 md:text-lg'>
             {heroContent.paragraph}
           </p>
 
-          <p className='mt-4 inline-flex items-center gap-2 font-mono text-xs tracking-wide text-highlight-on-ink/90'>
+          <p className='mt-4 inline-flex items-center gap-2 font-mono text-xs tracking-wide text-highlight-on-ink'>
             <span
               className='h-1.5 w-1.5 shrink-0 rounded-full bg-highlight-on-ink'
               aria-hidden
@@ -112,7 +106,7 @@ export function BrandHero () {
             {heroContent.skills.map(skill => (
               <li
                 key={skill}
-                className='border border-white/20 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold tracking-tight text-white/90 md:text-sm'
+                className='border border-white/25 bg-white/[0.08] px-3.5 py-1.5 text-xs font-semibold tracking-tight text-white md:text-sm'
               >
                 {skill}
               </li>
@@ -133,13 +127,13 @@ export function BrandHero () {
               href='/projects'
               event='view_work'
               detail='brand_hero'
-              className='inline-flex min-h-11 items-center gap-1.5 px-1 text-sm font-semibold text-white/75 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40'
+              className='inline-flex min-h-11 items-center gap-1.5 px-1 text-sm font-semibold text-white/80 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40'
             >
               Explore my work
               <ArrowUpRight className='h-3.5 w-3.5' aria-hidden />
             </TrackedCtaLink>
           </div>
-        </MotionRevealIn>
+        </div>
       </div>
     </section>
   )
